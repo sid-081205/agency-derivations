@@ -1,106 +1,99 @@
-# Derivations
+# Appendix: Derivations
 
-## 1. Payoff function
+## A.1 Payoff
 
-$$U_i(a_i, a_j) = \alpha \frac{a_i}{a_i + a_j} - \theta c \, a_i^2$$
+$$
+u_i(a_i, a_j) = \alpha\,\frac{a_i}{a_i + a_j} - c\,\theta\,a_i^{2}
+$$
 
-Share of prize minus expected failure cost.
+$\alpha>0$: value of edge. $c$: cost of a mistake. $\theta$: accountability.
 
-## 2. Values chosen for the 2×2
+---
 
-$$\alpha = 1, \qquad c = 1, \qquad a_H = 1, \qquad a_L = \tfrac{1}{2}$$
+## A.2 Two-option game ($\alpha=1,\ c=1,\ a\in\{1,\ 0.5\}$, payoffs in 24ths)
 
-Two regimes: $\theta = 1/6$ and $\theta = 1/3$.
+### θ = 1/6
 
-## 3. Shares
+$$
+u_i(\text{high},\text{low}) = \frac{1}{1.5} - \frac{1}{6}(1)^2 = \frac{16}{24}-\frac{4}{24} = \frac{12}{24}
+$$
 
-Equal choices:
+|            | j: high | j: low  |
+|------------|---------|---------|
+| **i: high**| (8, 8)  | (12, 7) |
+| **i: low** | (7, 12) | (11, 11)|
 
-$$\frac{a_i}{a_i+a_j} = \frac{1}{2} = \frac{12}{24}$$
+$8>7,\ 12>11 \Rightarrow$ high dominant. **Nash = (8, 8)**, yet $(11,11)$ dominates it → prisoner's dilemma.
 
-High against low:
+### θ = 1/3
 
-$$\frac{1}{1+\tfrac{1}{2}} = \frac{2}{3} = \frac{16}{24}, \qquad \frac{\tfrac{1}{2}}{1+\tfrac{1}{2}} = \frac{1}{3} = \frac{8}{24}$$
+$$
+u_i(\text{high},\text{low}) = \frac{2}{3} - \frac{1}{3}(1)^2 = \frac{16}{24}-\frac{8}{24} = \frac{8}{24}
+$$
 
-## 4. Costs
+|            | j: high | j: low  |
+|------------|---------|---------|
+| **i: high**| (4, 4)  | (8, 6)  |
+| **i: low** | (6, 8)  | (10, 10)|
 
-Cost is quadratic and $a_L = a_H/2$, so low costs one quarter of high:
+$6>4,\ 10>8 \Rightarrow$ low dominant. **Nash = (10, 10)** = best symmetric cell.
 
-$$\theta c\, a_H^2 = \theta, \qquad \theta c\, a_L^2 = \frac{\theta}{4}$$
+---
 
-| | $\theta = 1/6$ | $\theta = 1/3$ |
-|---|---|---|
-| cost of high | 4/24 | 8/24 |
-| cost of low | 1/24 | 2/24 |
+## A.3 Continuous equilibrium
 
-## 5. Cells (share − cost)
+$$
+\frac{\partial u_i}{\partial a_i} = \alpha\,\frac{a_j}{(a_i + a_j)^2} - 2c\theta\,a_i = 0
+$$
 
-For $\theta = 1/6$:
+Symmetry $a_i = a_j = a^{*}$:
 
-$$(L,L): \tfrac{12}{24} - \tfrac{1}{24} = \tfrac{11}{24} \text{ each}$$
+$$
+\frac{\alpha\,a^{*}}{(2a^{*})^2} = 2c\theta\,a^{*}
+\;\Rightarrow\;
+\frac{\alpha}{4a^{*}} = 2c\theta\,a^{*}
+\;\Rightarrow\;
+\alpha = 8c\theta (a^{*})^2
+$$
 
-$$(H,H): \tfrac{12}{24} - \tfrac{4}{24} = \tfrac{8}{24} \text{ each}$$
+$$
+\boxed{\,a^{*} = \sqrt{\dfrac{\alpha}{8\,c\,\theta}}\,}
+$$
 
-$$(H,L): i = \tfrac{16}{24} - \tfrac{4}{24} = \tfrac{12}{24}, \quad j = \tfrac{8}{24} - \tfrac{1}{24} = \tfrac{7}{24}$$
+Check: $\theta=\tfrac16 \Rightarrow a^{*}\approx0.87$; $\theta=\tfrac13 \Rightarrow a^{*}\approx0.61$.
 
-For $\theta = 1/3$:
+---
 
-$$(L,L): \tfrac{12}{24} - \tfrac{2}{24} = \tfrac{10}{24} \text{ each}$$
+## A.4 Two options with high $=2L$
 
-$$(H,H): \tfrac{12}{24} - \tfrac{8}{24} = \tfrac{4}{24} \text{ each}$$
+$$
+\Delta(a_j) = \alpha\!\left[\frac{2L}{2L + a_j} - \frac{L}{L + a_j}\right] - c\theta\big(4L^2 - L^2\big)
+$$
 
-$$(H,L): i = \tfrac{16}{24} - \tfrac{8}{24} = \tfrac{8}{24}, \quad j = \tfrac{8}{24} - \tfrac{2}{24} = \tfrac{6}{24}$$
+Bracket $= \tfrac16$ for either opponent choice:
 
-## 6. Matrices
+$$
+a_j=2L:\ \frac{2L}{4L}-\frac{L}{3L}=\frac12-\frac13=\frac16, \qquad
+a_j=L:\ \frac{2L}{3L}-\frac{L}{2L}=\frac23-\frac12=\frac16
+$$
 
-$\theta = 1/6$:
+$$
+\Delta = \frac{\alpha}{6} - 3c\theta L^{2} = 0
+\;\Rightarrow\;
+\boxed{\,\theta^{*} = \dfrac{\alpha}{18\,c\,L^{2}}\,}
+$$
 
-| | j: low | j: high |
-|---|---|---|
-| **i: low** | 11/24, 11/24 | 7/24, 12/24 |
-| **i: high** | 12/24, 7/24 | **8/24, 8/24** (Nash) |
+$\theta<\theta^{*}$: both high. $\theta>\theta^{*}$: both restrain.
 
-$\theta = 1/3$:
+Check ($\alpha=1,c=1,L=0.5$): $\theta^{*} = \dfrac{1}{18(0.25)} = \dfrac{2}{9} \approx 0.222$.
+$\ \tfrac16<0.222$ → arms race; $\ \tfrac13>0.222$ → restraint.
 
-| | j: low | j: high |
-|---|---|---|
-| **i: low** | **10/24, 10/24** (Nash) | 6/24, 8/24 |
-| **i: high** | 8/24, 6/24 | 4/24, 4/24 |
+---
 
-## 7. Dominance
+## A.5 Summary
 
-Gain to $i$ from switching low → high.
+$$
+a^{*} = \sqrt{\frac{\alpha}{8c\theta}}, \qquad \theta^{*} = \frac{\alpha}{18cL^{2}}
+$$
 
-If $j$ plays low:
-
-$$\left( \tfrac{2}{3} - \theta \right) - \left( \tfrac{1}{2} - \tfrac{\theta}{4} \right) = \tfrac{1}{6} - \tfrac{3\theta}{4}$$
-
-If $j$ plays high:
-
-$$\left( \tfrac{1}{2} - \theta \right) - \left( \tfrac{1}{3} - \tfrac{\theta}{4} \right) = \tfrac{1}{6} - \tfrac{3\theta}{4}$$
-
-Same in both columns, so one strategy is always strictly dominant and no mixed equilibrium exists.
-
-## 8. Threshold
-
-Setting the gain to zero:
-
-$$\tfrac{1}{6} - \tfrac{3\theta}{4} = 0 \quad \Longrightarrow \quad \theta = \tfrac{2}{9}$$
-
-$$\theta < \tfrac{2}{9}: \quad \text{high dominant, Nash} = (H,H)$$
-
-$$\theta > \tfrac{2}{9}: \quad \text{low dominant, Nash} = (L,L)$$
-
-Check: $1/6 < 2/9 < 1/3$.
-
-## 9. General form
-
-Restoring $\alpha$, $c$, $a_H$ with $a_L = a_H/2$, the race condition is
-
-$$\frac{\theta c\, a_H^2}{\alpha} < \frac{2}{9}$$
-
-No capability term appears.
-
-## 10. Note
-
-The fractions depend on $a_H = 2a_L$. Any other ratio shifts the numbers but a threshold $\theta$ still exists, which is all the argument needs.
+Both fall in $\theta$: accountability drives restraint. Result assumes the contest form $a_i/(a_i+a_j)$; an absolute edge $a_i-a_j$ changes it.
