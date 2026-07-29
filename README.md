@@ -64,6 +64,3 @@ $$\boxed{\;\theta^* = 1\;}$$
 
 At $\theta = 1$, private cost $=$ social cost. $\theta > 1$ is impossible. The game-theoretic optimum meets the moral one.
 
----
-
-*Assumes the contest form $a_i/(a_i + a_j)$ and $H = c\,\hat{a}$. Under a convex form ($H \propto c\,\hat{a}^3 \Rightarrow H \propto c^{-1/2}$), falling $c$ raises $H$. Either way $\partial H/\partial \theta < 0$ and $\theta^* = 1$.*
