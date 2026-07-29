@@ -1,14 +1,14 @@
-# Appendix: Derivations
+# Derivations
 
 **Payoff.**
 
 $$
-u_i(a_i, a_j) = \alpha\,\frac{a_i}{a_i + a_j} - c\,\theta\,a_i^{2}
+u_i(a_i, a_j) = \alpha \frac{a_i}{a_i + a_j} - c \theta a_i^{2}
 $$
 
 $\alpha>0$: value of edge; $c$: cost of a mistake; $\theta$: accountability.
 
-**Two-option game** ($\alpha=1,\ c=1,\ a\in\{1,\,0.5\}$; payoffs in 24ths).
+**Two-option game** ($\alpha=1,\ c=1,\ a\in\{1,\ 0.5\}$; payoffs in 24ths).
 
 For $\theta=\tfrac16$:
 
@@ -39,29 +39,29 @@ $6>4,\ 10>8 \Rightarrow$ low dominant. Nash $=(10,10)$, the best symmetric cell.
 **Continuous equilibrium.**
 
 $$
-\frac{\partial u_i}{\partial a_i} = \alpha\,\frac{a_j}{(a_i + a_j)^2} - 2c\theta\,a_i = 0
+\frac{\partial u_i}{\partial a_i} = \alpha \frac{a_j}{(a_i + a_j)^2} - 2c\theta a_i = 0
 $$
 
-Symmetry $a_i = a_j = a^{*}$:
+Symmetry $a_i = a_j = \hat a$:
 
 $$
-\frac{\alpha\,a^{*}}{(2a^{*})^2} = 2c\theta\,a^{*}
-\;\Rightarrow\;
-\frac{\alpha}{4a^{*}} = 2c\theta\,a^{*}
-\;\Rightarrow\;
-\alpha = 8c\theta\,(a^{*})^2
+\frac{\alpha \hat a}{(2\hat a)^2} = 2c\theta \hat a
+\quad\Rightarrow\quad
+\frac{\alpha}{4\hat a} = 2c\theta \hat a
+\quad\Rightarrow\quad
+\alpha = 8c\theta \hat a^{2}
 $$
 
 $$
-a^{*} = \sqrt{\frac{\alpha}{8\,c\,\theta}}
+\hat a = \sqrt{\frac{\alpha}{8 c \theta}}
 $$
 
-Check: $\theta=\tfrac16 \Rightarrow a^{*}\approx0.87$; $\ \theta=\tfrac13 \Rightarrow a^{*}\approx0.61$.
+Check: $\theta=\tfrac16 \Rightarrow \hat a\approx0.87$; $\ \theta=\tfrac13 \Rightarrow \hat a\approx0.61$.
 
 **Two options with** high $=2L$.
 
 $$
-\Delta(a_j) = \alpha\!\left[\frac{2L}{2L + a_j} - \frac{L}{L + a_j}\right] - c\theta\,(4L^2 - L^2)
+\Delta(a_j) = \alpha\left(\frac{2L}{2L + a_j} - \frac{L}{L + a_j}\right) - c\theta(4L^2 - L^2)
 $$
 
 The bracket $=\tfrac16$ for either opponent choice:
@@ -74,18 +74,18 @@ $$
 
 $$
 \Delta = \frac{\alpha}{6} - 3c\theta L^{2} = 0
-\;\Rightarrow\;
-\theta^{*} = \frac{\alpha}{18\,c\,L^{2}}
+\quad\Rightarrow\quad
+\hat\theta = \frac{\alpha}{18 c L^{2}}
 $$
 
-$\theta<\theta^{*}$: both high; $\ \theta>\theta^{*}$: both restrain.
+$\theta<\hat\theta$: both high; $\ \theta>\hat\theta$: both restrain.
 
-Check ($\alpha=1,\ c=1,\ L=0.5$): $\ \theta^{*} = \dfrac{1}{18(0.25)} = \dfrac{2}{9} \approx 0.222$; so $\tfrac16<0.222$ gives an arms race and $\tfrac13>0.222$ gives restraint.
+Check ($\alpha=1,\ c=1,\ L=0.5$): $\ \hat\theta = \dfrac{1}{18(0.25)} = \dfrac{2}{9} \approx 0.222$; so $\tfrac16<0.222$ gives an arms race and $\tfrac13>0.222$ gives restraint.
 
 **Summary.**
 
 $$
-a^{*} = \sqrt{\frac{\alpha}{8c\theta}}, \qquad \theta^{*} = \frac{\alpha}{18cL^{2}}
+\hat a = \sqrt{\frac{\alpha}{8c\theta}}, \qquad \hat\theta = \frac{\alpha}{18cL^{2}}
 $$
 
 Both fall in $\theta$: accountability drives restraint. This assumes the contest form $a_i/(a_i+a_j)$; an absolute edge $a_i-a_j$ changes the result.
