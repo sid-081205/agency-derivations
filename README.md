@@ -1,4 +1,4 @@
-# Derivations for my piece on (agency)[https://sid081205.substack.com/p/agentic-agency-and-games]
+# Derivations for my piece on [agency](https://sid081205.substack.com/p/agentic-agency-and-games)
 
 **Payoff.**
 
